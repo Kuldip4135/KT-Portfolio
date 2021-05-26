@@ -269,8 +269,6 @@ nav {
   position: relative;
   min-width: inherit;
   max-width: inherit;
-  display: flex;
-  height: 25rem;
 }
 
 .project-video video {
