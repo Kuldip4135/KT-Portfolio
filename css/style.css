@@ -318,36 +318,42 @@ nav {
 
 .skill-content {
   margin-top: 5rem;
-  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
 }
 
-.skill-content h1 {
-  font-size: 3rem;
+.skill-badge h1 {
+  font-size: 2rem;
+  border-radius: 10rem;
+  padding: 1rem 2rem;
+  background-color: var(--blue-color);
   color: var(--white-color);
   text-transform: uppercase;
-  letter-spacing: 0.3rem;
-  position: relative;
+  letter-spacing: 0.1rem;
+  text-align: center;
 }
 
-.skill-content h1::before {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
+.skill-badge h1:hover {
   color: var(--blue-color);
-  overflow: hidden;
-  animation: animate 2s linear infinite alternate;
-  border-right: 0.1rem solid #7633f9;
+  background-color: var(--white-color);
+}
+
+.skill-badge h1 {
+  animation: animate 4s linear infinite alternate;
 }
 
 @keyframes animate {
   0% {
-    width: 0%;
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
   }
 
   100% {
-    width: 12rem;
+    transform: scale(1.01);
   }
 }
 
