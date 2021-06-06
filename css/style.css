@@ -22,9 +22,9 @@ html {
 }
 
 body {
+  overflow-anchor: none;
   background-color: var(--black-color);
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: sans-serif;
 }
 
 a {
@@ -313,7 +313,7 @@ nav {
 /********************** Skill Styles **********************/
 
 .skill-section .global-heading .headline::before {
-  transform: translateX(10%);
+  transform: translateX(20%);
 }
 
 .skill-content {
