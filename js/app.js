@@ -2,6 +2,7 @@ const hamburgerMenu = document.querySelector(".hamburger-menu");
 const header = document.querySelector(".header");
 const navLinks = document.querySelectorAll("ul li");
 
+/*==================== Hamburger Menur ====================*/
 hamburgerMenu.addEventListener("click", () => {
   header.classList.toggle("header--active");
 });
@@ -14,13 +15,13 @@ navLinks.forEach((navLink) => {
   });
 });
 
-//Header
+/*==================== Header ====================*/
 window.addEventListener("scroll", () => {
-  let windowPosition = window.scrollY > 200;
+  let windowPosition = window.scrollY > 100;
   header.classList.toggle("scroll--active", windowPosition);
 });
 
-//Random Quotes
+/*==================== Random Quotes ====================*/
 const quote = document.querySelector(".quote");
 const author = document.querySelector(".quote-author");
 const URL = "https://type.fit/api/quotes";
