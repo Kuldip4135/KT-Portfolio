@@ -22,8 +22,10 @@ window.addEventListener("scroll", (e) => {
 
   if (scrollTop > lastScrollTop) {
     header.style.top = "-180px";
+    header.style.backgroundColor = "transparent";
   } else {
     header.style.top = "0";
+    header.style.backgroundColor = "#0f0f0f";
   }
   lastScrollTop = scrollTop;
 });

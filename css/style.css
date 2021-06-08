@@ -122,7 +122,6 @@ header {
   height: 12rem;
   display: flex;
   align-items: center;
-  background-color: var(--black-color);
   z-index: 999;
   transition: all 0.6s ease;
 }
