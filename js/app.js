@@ -1,6 +1,7 @@
 const hamburgerMenu = document.querySelector(".hamburger-menu");
 const header = document.querySelector(".header");
 const navLinks = document.querySelectorAll("ul li");
+let lastScrollTop = 0;
 
 /*==================== Hamburger Menur ====================*/
 hamburgerMenu.addEventListener("click", () => {
@@ -15,10 +16,16 @@ navLinks.forEach((navLink) => {
   });
 });
 
-/*==================== Header ====================*/
-window.addEventListener("scroll", () => {
-  let windowPosition = window.scrollY > 100;
-  header.classList.toggle("scroll--active", windowPosition);
+/*==================== Show Header On Scroll Down ====================*/
+window.addEventListener("scroll", (e) => {
+  let scrollTop = window.pageYOffset || document.createElement.scrollTop;
+
+  if (scrollTop > lastScrollTop) {
+    header.style.top = "-180px";
+  } else {
+    header.style.top = "0";
+  }
+  lastScrollTop = scrollTop;
 });
 
 /*==================== Random Quotes ====================*/
