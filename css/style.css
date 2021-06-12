@@ -563,5 +563,58 @@ footer {
   }
 }
 
-@media screen and (max-width: 400px) {
+/* Bouncer Loader Styles */
+.bouncer-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: var(--black-color);
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  z-index: 999999999;
+}
+
+.bouncer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 20rem;
+  height: 20rem;
+  margin: 0 auto;
+}
+
+.bouncer div {
+  width: 4rem;
+  height: 4rem;
+  background-color: var(--blue-color);
+  border-radius: 50%;
+  animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+}
+
+.bouncer div:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.bouncer div:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.bouncer div:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.bouncer-end {
+  transform: translateX(-100%);
+  opacity: 0;
+}
+
+@keyframes bouncer {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10rem);
+  }
 }

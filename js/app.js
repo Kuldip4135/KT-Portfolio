@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll("ul li");
 let lastScrollTop = 0;
 
 /*==================== Hamburger Menur ====================*/
+
 hamburgerMenu.addEventListener("click", () => {
   header.classList.toggle("header--active");
 });
@@ -17,6 +18,7 @@ navLinks.forEach((navLink) => {
 });
 
 /*==================== Show Header On Scroll Down ====================*/
+
 window.addEventListener("scroll", (e) => {
   let scrollTop = window.pageYOffset || document.createElement.scrollTop;
 
@@ -31,6 +33,7 @@ window.addEventListener("scroll", (e) => {
 });
 
 /*==================== Random Quotes ====================*/
+
 const quote = document.querySelector(".quote");
 const author = document.querySelector(".quote-author");
 const URL = "https://type.fit/api/quotes";
@@ -49,3 +52,11 @@ const getRandomQuotes = async () => {
 };
 
 getRandomQuotes();
+
+/*==================== Bouncer Loader ====================*/
+
+const bouncerWrapper = document.querySelector(".bouncer-wrapper");
+
+window.addEventListener("load", () => {
+  bouncerWrapper.parentElement.removeChild(bouncerWrapper);
+});
