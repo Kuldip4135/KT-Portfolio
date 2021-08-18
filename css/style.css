@@ -1,6 +1,4 @@
 /******************************* Global Styles **************************/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
-
 *,
 *::before,
 *::after {
@@ -19,7 +17,6 @@
 html {
   font-size: 10px;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
 }
 
 body {
